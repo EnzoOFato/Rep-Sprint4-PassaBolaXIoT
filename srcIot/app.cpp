@@ -111,5 +111,5 @@ void loop() {
   client.publish(mqtt_topic, envio.c_str()); // Publicando a mensagem no Brooker
   Serial.println("Dados enviados: " + envio);
 
-  delay(2000); // Tempo para a próxima mensagem
+  delay(500); // Tempo para a próxima mensagem
 }
