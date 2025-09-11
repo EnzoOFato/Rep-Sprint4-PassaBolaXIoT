@@ -1,6 +1,6 @@
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
-#include <Wifi.h>
+#include <WiFi.h>
 #include <PubSubClient.h>
 
 Adafruit_MPU6050 mpuSensor; // Declaração do Sensor MPU
