@@ -13,13 +13,11 @@ const char* ssid = "Wokwi-GUEST";
 const char* password = "";
 
 // Configuração HiveMQ
-const char* mqtt_server = "8ba3b8e02cee4063850876e30806f07c.s1.eu.hivemq.cloud";  // endereço do cluster
-const int mqtt_port = 8883;  // Porta segura
-const char* mqtt_user = "hivemq.webclient.1757562136665";  
-const char* mqtt_password = "l.8I!:P3Ve<qWhu4Jv7R"; 
-const char* mqtt_topic = "iot/sensores/desempenho";  // tópico central
+const char* mqtt_server = "broker.hivemq.com"; 
+const int mqtt_port = 1883;
+const char* mqtt_topic = "iot/sensores/desempenho";
 
-WiFiClientSecure espClient;
+WiFiClient espClient;
 PubSubClient client(espClient);
 
 int bpm = 0; // inicialização da varável de bpm
@@ -36,7 +34,7 @@ void setup_wifi() { //Método de conexão wifi via próprio provedor Wokwi
 void reconectar() { // Reconectar ao HiveMQ
   while (!client.connected()) {
     Serial.print("Tentando conectar ao HiveMQ...");
-    if (client.connect("ESP32Client", mqtt_user, mqtt_password)) {
+    if (client.connect("ESP32Client")) {
       Serial.println("Conectado ao HiveMQ Cluster!"); // Sucesso na Reconexão
     } else {
       Serial.print("Falha, rc= ");
@@ -50,7 +48,6 @@ void setup() {
   Serial.begin(115200); // Inicalização do Serial, para fins de teste
 
   setup_wifi(); //Conectar ao Wifi
-  espClient.setInsecure(); // Para testes sem certificado CA
   client.setServer(mqtt_server, mqtt_port); // Conexão do Setup ao HiveMQ
 
   if (!mpuSensor.begin()) { // Caso falhe a inialização do Sensor MPU (Isso em um cenário real, não falhará no Wokwi)
