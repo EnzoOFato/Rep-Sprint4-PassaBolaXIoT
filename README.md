@@ -24,3 +24,14 @@ Mas vamos dar um passo para traz. Nossa solução conta com dois sensores princi
 </div>
 
 # Links
+
+- Projeto Wokwi - desempenho: [Clique aqui]([https://youtu.be/0F-TH9LRduw](https://wokwi.com/projects/441706750972016641))
+
+- Vídeo - [Clique aqui](https://youtu.be/0F-TH9LRduw)
+
+# Integrantes
+- Enzo Amá Fatobene RM: 562138
+- João Vitor Rm: 564249
+- Leonardo Borges RM: 565966
+- Paulo Henrique RM: 562179
+- Pedro Henrique RM: 561924
