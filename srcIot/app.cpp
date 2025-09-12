@@ -5,7 +5,7 @@
 
 Adafruit_MPU6050 mpuSensor; // Declaração do Sensor MPU
 
-#define PotPin 15
+#define PotPin 34
 
 
 // Configuração da Rede
@@ -46,7 +46,6 @@ void reconectar() { // Reconectar ao HiveMQ
 
 void setup() {
   Serial.begin(115200); // Inicalização do Serial, para fins de teste
-
   setup_wifi(); //Conectar ao Wifi
   client.setServer(mqtt_server, mqtt_port); // Conexão do Setup ao HiveMQ
 
@@ -63,7 +62,6 @@ void setup() {
   mpuSensor.setFilterBandwidth(MPU6050_BAND_5_HZ); // Declarando o raio de banda do Sensor
 
   pinMode(PotPin, INPUT);
-
 }
 
 void loop() {
@@ -72,10 +70,13 @@ void loop() {
     reconectar();
   }
 
+  int valorPot = analogRead(PotPin); //Leitura Potenciômetro
+  Serial.print("Valor bruto do potenciômetro: ");
+  Serial.println(valorPot); //Para depuração
+
   client.loop();
 
   delay(10);
-  int valorPot = analogRead(PotPin);
   sensors_event_t a, r, temp; // Declarando todos os eventos coletados pelo sensor Aceleração (a), Rotação (r), Temperatura (temp)
   mpuSensor.getEvent(&a, &r, &temp); // Lendo os eventos captados pelo sensor
   Serial.println("Dados da aceleração"); // imprimindo dados da aceleração de cada eixo
