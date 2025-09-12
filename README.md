@@ -10,7 +10,7 @@ Mas vamos dar um passo para traz. Nossa solução conta com dois sensores princi
 
 ## Montagem Wokwi
 <div>
-    <img src="assets/Nivel.png">
+    <img src="assets/sensores.png">
 </div>
 
 ## Montagem Fisíca
