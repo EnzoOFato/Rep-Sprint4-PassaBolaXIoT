@@ -30,9 +30,9 @@ Mas vamos dar um passo para traz. Nossa solução conta com dois sensores princi
 
 # Links
 
-- Projeto Wokwi - desempenho: [Clique aqui]([https://youtu.be/0F-TH9LRduw](https://wokwi.com/projects/441706750972016641))
+- Projeto Wokwi - desempenho: [Clique aqui](https://wokwi.com/projects/441706750972016641)
 
-- Vídeo - [Clique aqui](https://youtu.be/0F-TH9LRduw)
+- Vídeo - [Clique aqui](https://youtu.be/bq00vz0clj0)
 
 # Integrantes
 - Enzo Amá Fatobene RM: 562138
