@@ -1,4 +1,4 @@
-# Rep-Sprint3-PassaBolaXIoT
+# Rep-Sprint4-PassaBolaXIoT
 Repositório com um intuito demonstrativo e educativo de possível tecnologia a ser utilizada por jogadoras de futebol feminino.
 
 # ❗Descrição do Problema❗
@@ -21,6 +21,11 @@ Mas vamos dar um passo para traz. Nossa solução conta com dois sensores princi
 ## DashBoard no Node-Red
 <div>
     <img src="assets/dash.png">
+</div>
+
+## Funcionamento Docker com Fiware em VM Azure
+<div>
+    <img src="assets/azure.png">
 </div>
 
 # Links

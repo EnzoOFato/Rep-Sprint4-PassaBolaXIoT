@@ -12,8 +12,8 @@ Adafruit_MPU6050 mpuSensor; // Declaração do Sensor MPU
 const char* ssid = "Wokwi-GUEST";
 const char* password = "";
 
-// Configuração HiveMQ
-const char* mqtt_server = "broker.hivemq.com"; 
+// Configuração Broker MQTT
+const char* mqtt_server = "68.154.50.209"; 
 const int mqtt_port = 1883;
 const char* mqtt_topic = "iot/sensores/desempenho";
 
@@ -112,5 +112,5 @@ void loop() {
   client.publish(mqtt_topic, envio.c_str()); // Publicando a mensagem no Brooker
   Serial.println("Dados enviados: " + envio);
 
-  delay(500); // Tempo para a próxima mensagem
+  delay(2000); // Tempo para a próxima mensagem
 }
